@@ -1,0 +1,27 @@
+# ---- Terraform state & plans (never commit) ----
+*.tfstate
+*.tfstate.*
+tfplan
+tfplan_*
+
+# ---- Local vars (template is terraform.tfvars.example) ----
+terraform.tfvars
+
+# ---- Debug / deployment scratch logs ----
+infra/_*.txt
+infra/apply_*.txt
+infra/plan*.txt
+infra/plan*.log
+infra/_tfcli_*.rc
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# ---- Editor / OS ----
+.idea/
+.vscode/
+.DS_Store
