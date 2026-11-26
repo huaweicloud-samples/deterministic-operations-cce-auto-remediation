@@ -1,0 +1,12 @@
+# 函数运行时依赖（与华为云 FunctionGraph 容器镜像一同打包）
+openai>=1.30
+huaweicloudsdkcore>=3.1.0
+huaweicloudsdkcce>=3.1.0
+huaweicloudsdksmn>=3.1.0
+huaweicloudsdkfunctiongraph>=3.1.0
+huaweicloudsdkkms>=3.1.0
+requests>=2.31.0
+urllib3>=2.0.0
+# 审批请求持久化：OBS（非 VPC 函数即可公网可达）
+esdk-obs-python>=3.23.0
+aiohttp>=3.9.0

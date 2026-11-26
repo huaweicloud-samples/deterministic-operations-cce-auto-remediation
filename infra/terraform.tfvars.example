@@ -1,0 +1,33 @@
+# 示例变量文件（复制为 terraform.tfvars 后填写）
+# 注意：敏感值（maas_api_key 等）建议通过 CI 注入或 KMS 加密，避免明文提交。
+
+region           = "cn-north-4"
+project_name     = "deterministic-operations-cce-auto-remediation"
+environment      = "dev"
+
+# 网络
+vpc_cidr   = "10.0.0.0/16"
+subnet_cidr = "10.0.1.0/24"
+subnet_az   = "cn-north-4a"
+
+# CCE 集群（默认复用已有集群，不新建计算资源）
+create_cce_cluster = false
+cce_cluster_id     = "cce-xxxxxxxx"   # 填写目标集群 ID
+cce_cluster_flavor = "cce.s1.small"
+cce_node_flavor    = "s6.large.2"
+cce_node_count     = 1
+
+# 镜像
+swr_organization = "mcp-cce"
+image_tag        = "latest"
+
+# 审批人
+approver_email = "ops@example.com"
+
+# 模型（MaaS）
+maas_base_url = "https://<maas-endpoint>/v1"
+maas_api_key  = ""   # 敏感：建议通过 CI / KMS 注入
+maas_model_id = "deepseek-v4-flash"
+
+# APIG
+apig_enabled = true
